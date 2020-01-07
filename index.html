@@ -1,14 +1,14 @@
-<!doctype html>
+ <!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>React js presentation</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/serif.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,8 +25,145 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<p>
+						<img width="400" height="283" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="React js" id="logo">
+					</p>
+					<h1>React JS</h1>
+				</section>
+				<section>
+					<h2>What is React?</h2>
+					<p>React is a Javascript library created by Facebook for building interactive user interfaces for web apps and websites.</p>
+				</section>
+				<section>
+					<h2>Is React a framework or a library?</h2>
+					<p>React is a JavaScript library for building user interfaces.</p>
+				</section>
+				<section>
+					<h2>When is React used?</h2>
+					<p>Initially released as a Javascript library for building user interfaces for the web, now can be used to build user interfaces for Android and iOS.</p>
+				</section>
+				<section>
+					<h2>Does React need any additional setup?</h2>
+					<p>Setting up React isn’t as simple as just launching a setup file. It involves a lot of processes.</p>
+				</section>
+				<section>
+					<h2>Can it be added to an existing project?</h2>
+					<p>React being a library can be used with an existing project.</p>
+				</section>
+				<section>
+					<h2>How do I host React applications?</h2>
+					<p>React applications can be hosted like any other web app. You can host your React app on Github Pages, Netlify, Heroku and so many others. </p>
+				</section>
+				<section>
+					<h2>How performant is React?</h2>
+					<p>React is quite fast, and it is so because of one main reason, the Virtual DOM.</p>
+					<img height="200" data-src="https://i2.wp.com/www.factweavers.com/blog/wp-content/uploads/2018/05/02_diffing.jpg">
+				</section>
+				<section>
+					<h2>React Components</h2>
+					<img width="456" height="257" data-src="https://maksimivanov.com/static/4342f0b06151a8f35ef66bb20f7d4afa/a9e43/react_component_structure.png" alt="component_structure" id="comp1">
+					<img width="456" height="257" data-src="https://maksimivanov.com/static/60554009d2168afef8ae80e0c74818b7/50336/component_tree.png" alt="component_tree" id="comp2">
+				</section>
+				<section>
+					<h2>Creating a React Component</h2>
+					<ul>
+						<li>using functions
+							<div>
+								<pre><code data-trim data-noescape>
+	const SimpleComponent = () => {
+	  return &lt;div&gt;Very basic component.&lt;/div&gt;;
+	};
+								</code></pre>
+							</div>
+						</li>
+						<li>using classes
+							<div>
+								<pre><code data-trim data-noescape>
+	class SimpleComponent extends React.Component {
+	  render() {
+	    return &lt;div&gt;Very basic component.&lt;/div&gt;;
+	  }
+	}
+								</code></pre>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Composing Components</h2>
+					<div>
+						<pre><code data-trim data-noescape>
+	const Header = () => &lt;&gt;{/* Some Header Layout */}&lt;/&gt;;
+	const LoginForm = () => &lt;&gt;{/* Login Form Layout */}&lt;/&gt;;
+
+	const LoginPanel = () => (
+	  &lt;div&gt;
+	    &lt;LoginForm /&gt;
+	  &lt;/div&gt;
+	);
+
+	const LoginPage = () => (
+	  &lt;&gt;
+	    &lt;Header /&gt;
+	    &lt;LoginPanel /&gt;
+	  &lt;/&gt;
+	);
+						</code></pre>
+					</div>
+				</section>
+				<section>
+					<h2>Rendering Components</h2>
+					<div>
+						<pre><code data-trim data-noescape>
+	const App => () (
+	  &lt;h1&gt;Simple app.&lt;/h1&gt;;
+	)
+
+	ReactDOM.render(
+	  &lt;App /&gt;,
+	  document.getElementById('root')
+	);
+						</code></pre>
+					</div>
+				</section>
+				<section>
+					<h2>Lifecycle Methods</h2>
+					<img data-src="https://survivejs.com/eb0e7400e7cd75921e04093e0d6cff86.png" alt="Lifecycle Methods" id="lifecycle">
+				</section>
+				<section>
+					<h2>React Props</h2>
+					<div>
+						<pre><code data-trim data-noescape>
+	class BasicProp extends React.Component {
+	  render() {
+	    return &lt;h1&gt;Hello {this.props.name}&lt;/h1&gt;;
+	  }
+	}
+	
+	React.render(&lt;BasicProp name="Jake" /&gt;, document.getElementById('app'));
+						</code></pre>
+					</div>
+				</section>
+				<section>
+					<h2>What are the advantages of React?</h2>
+					<ul>
+						<li>Virtual DOM</li>
+						<li>Reusable components</li>
+						<li>Server-side rendering of websites</li>
+						<li>No framework-specific code</li>
+						<li>Easy teamwork</li>
+					</ul>
+				</section>
+				<section>
+					<h2>What are the cons of React?</h2>
+					<ul>
+						<li>Frequent changes</li>
+						<li>JSX is quite hard to learn</li>
+						<li>You have to structure your app yourself</li>
+					</ul>
+					</section>
+				<section><h2>Thanks for watching!</h2></section>
 			</div>
 		</div>
 
